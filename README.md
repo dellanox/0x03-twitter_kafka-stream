@@ -1,3 +1,4 @@
+# About the twitter data stream program
 The scripts work together to set up a data pipeline that includes data ingestion
 from Twitter using the Twitter Streaming API, processing and writing the data
 using PySpark, and managing Kafka topics using the KafkaAdminClient. Note that
@@ -30,9 +31,10 @@ and "School"). It processes the incoming data by extracting specific fields
 from the JSON structure, and then writes the processed data to separate S3
 buckets based on the topic.
 
-####topic.py:
+#### topic.py:
 
-This script manages Kafka topics. It uses the KafkaAdminClient to create new
-Kafka topics for "Politics," "Health," and "School" if they don't already exist.
+This script manages Kafka topics. It uses the KafkaAdminClient to check if topics
+exist, and creates newKafka topics for "Politics," "Health," and "School" if
+they don't already exist.
 It also lists consumer groups and displays cluster information.
 There's commented-out code for deleting topics and describing topic configurations.
