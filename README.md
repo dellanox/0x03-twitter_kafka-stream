@@ -11,19 +11,19 @@ processing, and managing Kafka messages related to different topics.
 
 ### Here's a breakdown of each script's functionality:
 
-####consumer.py:
+#### consumer.py:
 
 This script sets up a Kafka consumer to receive messages from the "Politics" topic.
 It deserializes the messages from bytes to JSON format and logs their values.
 If there is an exception during the process, a warning is logged.
 
-####producer.py:
+#### producer.py:
 
 This script establishes a connection to Kafka and utilizes the Twitter Streaming
 API to retrieve tweets related to "Politics," "Health," and "School" topics.
 It sends the received tweets to the corresponding Kafka topics using the Kafka producer.
 
-####stream.py:
+#### stream.py:
 
 This script uses PySpark to read data from Kafka topics ("Politics," "Health,"
 and "School"). It processes the incoming data by extracting specific fields
